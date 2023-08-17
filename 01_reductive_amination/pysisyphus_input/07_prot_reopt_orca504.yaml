@@ -1,0 +1,29 @@
+geom:
+ type: redund
+ fn: inp_orca_503_ts_opt.xyz
+calc:
+ type: orca5
+ keywords: r2scan-3c tightscf
+ pal: 12
+ mem: 10000
+ charge: 0
+ mult: 1
+ out_dir: qm_calcs
+tsopt:
+ thresh: gau
+ do_hess: True
+ hessian_recalc: 10
+ hessian_init: inp_orca503_ts_final_hessian.h5
+irc:
+ rms_grad_thresh: 0.00025
+endopt:
+ fragments: total
+ do_hess: True
+barriers:
+ solv_calc:
+  type: orca5
+  keywords: r2scan-3c tightscf cpcm(methanol)
+  blocks: '%cpcm smd true smdsolvent "methanol" end'
+  pal: 12
+  mem: 10000
+ do_standard_state_corr: True
