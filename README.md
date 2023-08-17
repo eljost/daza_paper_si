@@ -10,3 +10,12 @@ Two exemplary inputs for the double hybrid density functional theory calculation
 *double_hybrid_solvated.inp*.
 
 All quantum chemical calculations were carried out using ORCA 5.0.4.
+
+&nbsp;
+
+| Directory   |      Description      |
+|----------|-------------|
+| *00_1step* | One step carbonyl insertion via **TS 1** |
+| *01_reductive_amination* |    Reductive amination via **3e**   |
+| *02_2steps_step1* | First step of two-step carbonyl insertion via **TS 2.1** |
+| *03_2steps_step2* | Second step of two-step carbonyl insertion via **TS 2.2** |¸
